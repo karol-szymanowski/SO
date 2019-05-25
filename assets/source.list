@@ -1,0 +1,3 @@
+deb http://deb.debian.org/debian/ stretch main contrib
+deb http://security.debian.org/ stretch/updates contrib main
+deb http://deb.debian.org/debian/ stretch-updates contrib main
