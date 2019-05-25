@@ -16,6 +16,6 @@ takeScreenshot() {
     import -window root -silent /var/$FILE_NAME
 
     if [ FTP_PASSWORD ]; then
-        uploadToFtp /var/$FILE_NAME
+        uploadToFtp $FILE_NAME
     fi
 }
