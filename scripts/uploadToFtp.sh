@@ -18,5 +18,5 @@ uploadToFtp() {
 
     echo "Uploading $FILE_NAME to $FTP_USER@$FTP_HOST/$FTP_DIRECTORY"
 
-    lftp -u $FTP_USER,$FTP_PASSWORD $FTP_HOST/$FTP_DIRECTORY -e "set ftp:use-allo false; set ftp:passive-mode true; set ftp:prefer-epsv false; put -a $FILE_NAME;quit"
+    lftp -u $FTP_USER,$FTP_PASSWORD $FTP_HOST/$FTP_DIRECTORY -e "set ftp:use-allo false; set ftp:passive-mode true; set ftp:prefer-epsv false; put /var/$FILE_NAME $FILE_NAME; quit"
 }
