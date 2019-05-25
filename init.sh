@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 
-wget https://raw.githubusercontent.com/tetrash/SO/master/assets/source.list -P /etc/apt/
+wget https://raw.githubusercontent.com/tetrash/SO/master/assets/sources.list -P /etc/apt/
 
-apt-get update
+apt-get update && apt-get install -y git
 
-apt-get install -y git
-git clone https://github.com/tetrash/SO.git /usr
+git clone https://github.com/tetrash/SO.git /usr/src/SO
 
-cp /usr/SO/.env.example /usr/SO/.env
+cp /usr/src/SO/.env.example /usr/src/SO/.env
+
+find /usr/src/SO -type f -iname "*.sh" -exec chmod +x {} \;

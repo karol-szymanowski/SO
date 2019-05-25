@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-. ../.env
+. $(dirname "$0")/../.env
 
 uploadToFtp() {
     if [ !$1 ]; then
-        echo "uploadToFtp.sh requires filename"
+        echo "uploadToFtp.sh requires 1 parameter"
         exit 1
     fi
 
@@ -14,6 +14,7 @@ uploadToFtp() {
     fi
 
     FILE_NAME=$1
+    echo "Uploading $FILE_NAME to $FTP_USER@$FTP_HOST/$FTP_DIRECTORY"
 
     lftp -u $FTP_USER,$FTP_PASSWORD $FTP_HOST/$FTP_DIRECTORY -e "put -a $FILE_NAME;quit"
 }
