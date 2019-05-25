@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 . $(dirname "$0")/uploadToFtp.sh
 
@@ -10,7 +11,7 @@ takeScreenshot() {
         exit 1
     fi
 
-    echo "Taking screenshot: $(FILE_NAME)"
+    echo "Taking screenshot: $FILE_NAME"
 
     import -window root -silent $FILE_NAME
 

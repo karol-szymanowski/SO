@@ -11,8 +11,8 @@ uploadToFtp() {
         exit 1
     fi
 
-    if [ -z "$FTP_USER" ] || [ -z "$FTP_PASSWORD" ] || [ -z "$FTP_HOST" ] || [ -z "$FTP_DIRECTORY" ]; then
-        echo "uploadToFtp.sh requires FTP_USER FTP_PASSWORD FTP_HOST FTP_DIRECTORY variables"
+    if [ -z "$FTP_USER" ] || [ -z "$FTP_PASSWORD" ] || [ -z "$FTP_HOST" ]; then
+        echo "uploadToFtp.sh requires FTP_USER FTP_PASSWORD FTP_HOST variables"
         exit 1
     fi
 

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 wget https://raw.githubusercontent.com/tetrash/SO/master/assets/sources.list -P /etc/apt/
 
