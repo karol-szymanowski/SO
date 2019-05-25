@@ -13,9 +13,9 @@ takeScreenshot() {
 
     echo "Taking screenshot: $FILE_NAME"
 
-    import -window root -silent $FILE_NAME
+    import -window root -silent /var/$FILE_NAME
 
     if [ FTP_PASSWORD ]; then
-        uploadToFtp $FILE_NAME
+        uploadToFtp /var/$FILE_NAME
     fi
 }
