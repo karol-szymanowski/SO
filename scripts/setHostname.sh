@@ -10,8 +10,7 @@ if [ -z "$NEW_HOSTNAME" ]; then
     exit 1
 fi
 
-echo NEW_HOSTNAME > /etc/hostname
- && cat /etc/hostname
+echo NEW_HOSTNAME > /etc/hostname && cat /etc/hostname
 
 takeScreenshot hostname-1
 
