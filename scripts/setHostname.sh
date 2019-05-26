@@ -16,7 +16,6 @@ clear
 cat /etc/hostname
 takeScreenshot hostname-1
 
-mkdir -p /home/student/.profile/
 cp $(dirname "$0")/post-setHostname.sh /home/student/.profile/
 chmod /home/student/.profile/post-setHostname.sh
 
