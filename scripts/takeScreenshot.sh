@@ -15,7 +15,7 @@ takeScreenshot() {
 
     import -window root -silent /home/student/$FILE_NAME
 
-    if [ FTP_PASSWORD ]; then
+    if [ -z "$FTP_PASSWORD" ]; then
         uploadToFtp $FILE_NAME || echo "Cannot upload $FILE_NAME to $FTP_HOST. Skipping this operation"
     fi
 }
