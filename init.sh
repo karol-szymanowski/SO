@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-cp /etc/apt/sources.list /etc/apt/sources.list.bak
-wget https://raw.githubusercontent.com/tetrash/SO/master/assets/sources.list -O /etc/apt/sources.list
+wget --backups="bak" https://raw.githubusercontent.com/tetrash/SO/master/assets/sources.list -O /etc/apt/sources.list
 
 apt-get -y update && apt-get install -y git
 
