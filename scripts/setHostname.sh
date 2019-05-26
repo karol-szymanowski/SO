@@ -16,6 +16,6 @@ clear
 cat /etc/hostname
 takeScreenshot hostname-1
 
-cp $(dirname "$0")/post-setHostname.sh /etc/init.d/script/
+cp $(dirname "$0")/post-setHostname.sh /etc/init.d/
 
 reboot
