@@ -10,7 +10,7 @@ if [ -z "$NEW_HOSTNAME" ]; then
     exit 1
 fi
 
-echo NEW_HOSTNAME > /etc/hostname
+echo $NEW_HOSTNAME > /etc/hostname
 
 clear
 cat /etc/hostname
