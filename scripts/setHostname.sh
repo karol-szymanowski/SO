@@ -10,13 +10,10 @@ if [ -z "$NEW_HOSTNAME" ]; then
     exit 1
 fi
 
-echo $NEW_HOSTNAME > /etc/hostname
+hostname $NEW_HOSTNAME
+
+exec bash
 
 clear
-cat /etc/hostname
-takeScreenshot hostname-1
-
-echo "/usr/src/SO/scripts/post-setHostname.sh" >> /home/student/.profile/
-chmod /home/student/.profile/post-setHostname.sh
-
-reboot
+hostname
+takeScreenshot hostname
