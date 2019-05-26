@@ -10,8 +10,12 @@ if [ -z "$NEW_HOSTNAME" ]; then
     exit 1
 fi
 
-echo NEW_HOSTNAME > /etc/hostname && cat /etc/hostname
+echo NEW_HOSTNAME > /etc/hostname
 
+clear
+cat /etc/hostname
 takeScreenshot hostname-1
 
-echo "Reboot system"
+cp $(dirname "$0")/post-setHostname.sh /etc/init.d/script/
+
+reboot
